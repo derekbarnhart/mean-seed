@@ -8,6 +8,22 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+/**
+ * Mongo DB setup
+ */
+var mongoose = require ("mongoose");
+
+var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/DevMongo';
+
+mongoose.connect(uristring, function (err, res) {
+    if (err) {
+        console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+    } else {
+        console.log ('Successfully connected to: ' + uristring);
+    }
+});
+
+
 var app = express();
 
 app.configure(function(){

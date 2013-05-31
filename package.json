@@ -5,8 +5,9 @@
     "start": "node app"
   },
   "dependencies": {
-  	"express": "3.1.0",
-    "ejs": "*"},
+  	   "mongoose": "*",
+      "express": "3.1.0",
+       "ejs": "*"},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.0",
