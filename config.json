@@ -1,0 +1,7 @@
+{
+    "application":{
+        "name":"Application Name",
+        "cookieSecret":"6e6bc3e0-b3ae-4032-9186-994d7094385e",
+        "sessionSecret":"f1774a1a-e5af-4d07-87ea-258a42478542"
+    }
+}

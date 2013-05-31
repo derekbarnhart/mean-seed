@@ -8,6 +8,13 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+
+/**
+ * Configurations
+ */
+var config = require('./config.json')
+
+
 /**
  * Mongo DB setup
  */
@@ -117,9 +124,9 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('6e6bc3e0-b3ae-4032-9186-994d7094385e'));
+  app.use(express.cookieParser(config.application.cookieSecret));
   app.use(express.session({
-        secret: "f1774a1a-e5af-4d07-87ea-258a42478542",
+        secret: config.application.sessionSecret,
         store: new RedisStore({client: client})
     }));
   app.use(passport.initialize()); //For authentication
