@@ -5,7 +5,10 @@
     "start": "node app"
   },
   "dependencies": {
-  	   "mongoose": "*",
+  	  "passport":"*",
+      "passport-local":"*",
+      "bcrypt":"*",
+      "mongoose": "*",
       "connect-redis":"*",
       "redis":"*",
       "express": "3.1.0",
