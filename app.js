@@ -62,7 +62,6 @@ var User = require("./models/UserModel")
 passport.use(new LocalStrategy(
     function(username, password, done) {
 
-        console.log(username + " " +password)
 
         User.findOne({username:username}, function(err,user){
             if(err){
@@ -204,7 +203,7 @@ app.post('/user',function( req, res){
 // Protected routes
 
 //Place authenticate in the argument list to protect route
-//app.get('/protected',authenticate,routes.protected)
+//app.get('/protected',authenticate, routes.protected)
 
 //TODO implement a role filtering system
 
